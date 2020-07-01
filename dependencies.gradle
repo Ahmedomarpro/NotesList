@@ -1,0 +1,55 @@
+ext {
+    // Plugins
+    androidGradlePlugin = '4.0.0'
+
+    // Versions
+    kotlinVersion = '1.3.72'
+    coroutineVersion = '1.0.1'
+    supportVersion = '1.0.0'
+    materialVersion = '1.3.0-alpha01'
+    lifecycleVersion = "2.2.0"
+    roomVersion = '2.1.0-alpha04'
+    constraintLayoutVersion = "2.0.0-beta7"
+
+    // Testing
+    jUnitVersion = '4.13'
+    espressoVersion = '3.2.0'
+    testRunnerVersion = '1.2.0'
+
+    // Kotlin
+    kotlinLibraries = [
+            kotlin    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+    ]
+
+    // Support Libraries
+    supportLibraries = [
+            appCompat   : "androidx.appcompat:appcompat:${supportVersion}",
+            cardView    : "androidx.cardview:cardview:${supportVersion}",
+            recyclerView: "androidx.recyclerview:recyclerview:${supportVersion}",
+            material    : "com.google.android.material:material:${materialVersion}",
+            constraintLayout : "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}"
+    ]
+
+    // Arch Components
+    archLibraries = [
+            lifecycle        : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+            lifecycleCompiler: "androidx.lifecycle:lifecycle-compiler:${lifecycleVersion}",
+
+            room             : "androidx.room:room-runtime:${roomVersion}",
+            roomCompiler     : "androidx.room:room-compiler:${roomVersion}",
+            roomCoroutines   : "androidx.room:room-coroutines:${roomVersion}"
+    ]
+
+    // Testing
+    testLibraries = [
+            junit     : "junit:junit:${jUnitVersion}",
+            testRunner: "androidx.test:runner:${testRunnerVersion}",
+            espresso  : "androidx.test.espresso:espresso-core:${espressoVersion}",
+    ]
+
+    gradlePlugins = [
+            kotlin : "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}",
+            android: "com.android.tools.build:gradle:${androidGradlePlugin}",
+    ]
+}
